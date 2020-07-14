@@ -23,7 +23,6 @@ import androidx.core.text.TextDirectionHeuristicsCompat;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.util.AttributeSet;
-import android.view.ContextThemeWrapper;
 import android.view.View;
 
 import com.android.messaging.R;
@@ -43,7 +42,7 @@ public class PhoneNumberPreference extends EditTextPreference {
     private int mSubId;
 
     public PhoneNumberPreference(final Context context, final AttributeSet attrs) {
-        super(new ContextThemeWrapper(context, R.style.BugleThemeDialog), attrs);
+        super(context, attrs);
         mDefaultPhoneNumber = "";
     }
 
